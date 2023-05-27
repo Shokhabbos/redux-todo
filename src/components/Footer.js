@@ -1,6 +1,10 @@
-const Footer = () => {
+const Footer = ({selector}) => {
+  const handleSave = () => {
+    localStorage.setItem('todos', JSON.stringify(selector)) 
+  }
+  
   return (
-    <button className="btn btn-primary text-center mx-auto d-block w-25 ">
+    <button onClick={handleSave} className="btn btn-primary text-center mx-auto d-block w-25 ">
       Save
     </button>
   );

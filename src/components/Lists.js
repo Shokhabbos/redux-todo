@@ -2,15 +2,13 @@ import { useSelector } from "react-redux";
 
 import List from "./List";
 
-const Lists = () => {
-  const selector = useSelector((state) => state.todos);
-  console.log(selector);
+const Lists = ({selector}) => {
 
   return (
     <ul className="list-group">
       {selector.length > 0 ? (
         selector.map((todo, i) => (
-          <List key={i} title={todo.text} id={todo.id} />
+          <List key={i} title={todo.title} id={todo.id} status={todo.status} />
         ))
       ) : (
         <h3 className="text-center">Todos not found</h3>

@@ -1,10 +1,9 @@
 import { useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 import { addTodo } from "../actions/todos";
 
 const Form = () => {
-  // const selector = useSelector((state) => state.todos);
   const dispatch = useDispatch();
   const inputRef = useRef(null);
   const formRef = useRef(null);

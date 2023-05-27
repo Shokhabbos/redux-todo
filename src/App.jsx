@@ -8,8 +8,7 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     let local = JSON.parse(localStorage.getItem('todos'))
-   dispatch( saveTodo(local)
-   )
+   dispatch( saveTodo(local)   )
   }, []);
   return (
     <div className="container">

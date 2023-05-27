@@ -6,10 +6,7 @@ import { saveTodo } from "./actions/todos";
 function App() {
   const selector = useSelector((state) => state.todos);
   const dispatch = useDispatch();
-  useEffect(() => {
-    let local = JSON.parse(localStorage.getItem('todos'))
-   dispatch( saveTodo(local))
-  }, []);
+
   return (
     <div className="container">
       <div className="row">

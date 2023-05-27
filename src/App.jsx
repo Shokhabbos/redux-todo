@@ -9,7 +9,6 @@ function App() {
   useEffect(() => {
     let local = JSON.parse(localStorage.getItem('todos'))
    dispatch( saveTodo(local)
-
    )
   }, []);
   return (
